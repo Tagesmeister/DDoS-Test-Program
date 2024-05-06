@@ -29,7 +29,7 @@ namespace DDoS_Program
         }
         private async Task SendRequest(string url, int numberOfRequest)
         {
-            string imagePath = "Write here the path to your image"; // Path to your image.
+            string imagePath = "Write the path to your image here"; // Path to your image.
             try
             {
                 using (var client = new HttpClient())
